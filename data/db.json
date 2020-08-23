@@ -1,0 +1,128 @@
+{
+	"headers": [
+		{
+			"page" : "register",
+			"role" : "user",
+			"linkname" : "Login",
+			"linkvalue" :"/Login"
+		},
+		{
+			"page" : "login",
+			"role" : "user",
+			"linkname" : "Register",
+			"linkvalue" :"/Register"
+		},
+		{
+			"page" : "GiftCardOrder",
+			"role" : "user",
+			"linkname" : "New Order",
+			"linkvalue" :"/giftcardorder"
+		},
+		{
+			"page" : "GiftCardOrder",
+			"role" : "user",
+			"linkname" : "Order History",
+			"linkvalue" :"/viewgiftcard"
+		},
+		{
+			"page" : "GiftCardOrder",
+			"role" : "user",
+			"linkname" : "Log Out",
+			"linkvalue" :"/"
+		}
+	],
+  "users": [
+    {
+      "id": 1,
+      "username": "username",
+      "password": "testing",
+	  "email": "username@gmail.com",
+	  "role":"admin"
+    },
+    {
+      "id": 2,
+      "username": "usernamsse",
+      "password": "testin2g",
+	  "email": "usernam2e@gmail.com",
+	  "role":"user"
+    },
+    {
+      "username": "ss",
+      "password": "ss",
+      "email": "ss",
+	  "id": 3,
+	  "role":"user"
+    },
+    {
+      "username": "ee",
+      "password": "ee",
+      "email": "ee",
+	  "id": 4,
+	  "role":"user"
+    },
+    {
+      "username": "username",
+      "password": "pasword",
+      "email": "lajdf@gmail.com",
+	  "id": 5,
+	  "role":"user"
+    }
+  ],
+  "giftcards": [
+    {
+      "recipient_fname": "rfname2",
+      "recipient_lname": "rlname2",
+      "giftcardvalue": "13",
+      "percent": 5,
+      "mobilenumber": "9600120086",
+      "address": "address2",
+      "id": 2,
+      "deliveryStatus": "UnDelivered",
+      "ordereddate": "22-08-2020"
+    },
+    {
+      "recipient_fname": "rfname3",
+      "recipient_lname": "rlname2",
+      "giftcardvalue": "13",
+      "percent": 5,
+      "mobilenumber": "9600120086",
+      "address": "address2",
+      "id": 3,
+      "deliveryStatus": "UnDelivered",
+      "ordereddate": "22-09-2020"
+    },
+    {
+      "recipient_fname": "rfname4",
+      "recipient_lname": "rfname5",
+      "giftcardvalue": "89",
+      "percent": 5,
+      "mobilenumber": "9600120086",
+      "address": "address",
+      "deliveryStatus": "UnDelivered",
+      "ordereddate": "Sun Aug 23 2020 00:32:23 GMT-0500 (Central Daylight Time)",
+      "id": 4
+    },
+    {
+      "recipient_fname": "rfname5",
+      "recipient_lname": "rfname5",
+      "giftcardvalue": "56",
+      "percent": 5,
+      "mobilenumber": "96001200086",
+      "address": "address5",
+      "deliveryStatus": "UnDelivered",
+      "ordereddate": "2020/08/23",
+      "id": 5
+    },
+    {
+      "recipient_fname": "rfnam7",
+      "recipient_lname": "rlname7",
+      "giftcardvalue": "89",
+      "percent": 4.45,
+      "mobilenumber": "9600120086",
+      "address": "addresssss",
+      "deliveryStatus": "UnDelivered",
+      "ordereddate": "2020/08/23",
+      "id": 6
+    }
+  ]
+}
