@@ -1,7 +1,6 @@
 <template>
-  <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <Home msg="Welcome to Your Vue.js App"/>
+  <div class="container" id="app">
+    <Home msg="" /> 
     <router-view></router-view>
   </div>
 </template>
@@ -13,6 +12,16 @@ export default {
   name: 'App',
   components: {
     Home
+  },
+  data: function() {
+    return {
+       Headers:[]
+    }
+  },
+  mounted: function (){
+   
+    //if(localStorage)
+      //localStorage.setItem(process.env.USER_ROLE_NAME, '')
   }
 }
 </script>
@@ -28,5 +37,6 @@ export default {
   font-size: 14px;
 }
 
-@import 'style.css'
+@import url(./assets/style.css);
+
 </style>

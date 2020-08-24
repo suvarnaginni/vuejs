@@ -1,71 +1,114 @@
 {
-	"headers": [
-		{
-			"page" : "register",
-			"role" : "user",
-			"linkname" : "Login",
-			"linkvalue" :"/Login"
-		},
-		{
-			"page" : "login",
-			"role" : "user",
-			"linkname" : "Register",
-			"linkvalue" :"/Register"
-		},
-		{
-			"page" : "GiftCardOrder",
-			"role" : "user",
-			"linkname" : "New Order",
-			"linkvalue" :"/giftcardorder"
-		},
-		{
-			"page" : "GiftCardOrder",
-			"role" : "user",
-			"linkname" : "Order History",
-			"linkvalue" :"/viewgiftcard"
-		},
-		{
-			"page" : "GiftCardOrder",
-			"role" : "user",
-			"linkname" : "Log Out",
-			"linkvalue" :"/"
-		}
-	],
+  "headers": [
+    {
+      "page": "register",
+      "role": "user",
+      "routename": "Login",
+      "routepath": "/Login"
+    },
+    {
+      "page": "login",
+      "role": "none",
+      "routename": "Register",
+      "routepath": "/Register"
+    },
+    {
+      "page": "giftcardorder",
+      "role": "user",
+      "routename": "New Order",
+      "routepath": "/giftcardorder"
+    },
+    {
+      "page": "giftcardorder",
+      "role": "user",
+      "routename": "Order History",
+      "routepath": "/viewgiftcard"
+    },
+    {
+      "page": "giftcardorder",
+      "role": "user",
+      "routename": "Log Out",
+      "routepath": "/"
+    },
+    {
+      "page": "viewgiftcard",
+      "role": "user",
+      "routename": "New Order",
+      "routepath": "/giftcardorder"
+    },
+    {
+      "page": "viewgiftcard",
+      "role": "user",
+      "routename": "Order History",
+      "routepath": "/viewgiftcard"
+    },
+    {
+      "page": "viewgiftcard",
+      "role": "user",
+      "routename": "Log Out",
+      "routepath": "/"
+    },
+    {
+      "page": "viewgiftcard",
+      "role": "admin",
+      "routename": "Monthly Report",
+      "routepath": "/monthlyreport"
+    },
+    {
+      "page": "viewgiftcard",
+      "role": "admin",
+      "routename": "Order History",
+      "routepath": "/viewgiftcard"
+    },
+    {
+      "page": "viewgiftcard",
+      "role": "admin",
+      "routename": "Log Out",
+      "routepath": "/"
+    }
+  ],
   "users": [
     {
       "id": 1,
       "username": "username",
       "password": "testing",
-	  "email": "username@gmail.com",
-	  "role":"admin"
+      "email": "username@gmail.com",
+      "role": "admin"
     },
     {
       "id": 2,
       "username": "usernamsse",
       "password": "testin2g",
-	  "email": "usernam2e@gmail.com",
-	  "role":"user"
+      "email": "usernam2e@gmail.com",
+      "role": "user"
     },
     {
       "username": "ss",
       "password": "ss",
       "email": "ss",
-	  "id": 3,
-	  "role":"user"
+      "id": 3,
+      "role": "user"
     },
     {
-      "username": "ee",
-      "password": "ee",
+      "username": "admin",
+      "password": "admin",
       "email": "ee",
-	  "id": 4,
-	  "role":"user"
+      "id": 4,
+      "role": "admin"
     },
     {
       "username": "username",
       "password": "pasword",
       "email": "lajdf@gmail.com",
-	  "id": 5,
-	  "role":"user"
+      "id": 5,
+      "role": "user"
+    },
+    {
+      "username": "afadsf",
+      "password": "asdfasdf",
+      "email": "asdfdf",
+      "role": "USER",
+      "id": 6
     }
   ],
   "giftcards": [
@@ -77,8 +120,9 @@
       "mobilenumber": "9600120086",
       "address": "address2",
       "id": 2,
-      "deliveryStatus": "UnDelivered",
-      "ordereddate": "22-08-2020"
+      "deliveryStatus": "Delivered",
+      "ordereddate": "22-08-2020",
+      "userid": 1
     },
     {
       "recipient_fname": "rfname3",
@@ -89,7 +133,8 @@
       "address": "address2",
       "id": 3,
       "deliveryStatus": "UnDelivered",
-      "ordereddate": "22-09-2020"
+      "ordereddate": "22-09-2020",
+      "userid": 1
     },
     {
       "recipient_fname": "rfname4",
@@ -100,7 +145,8 @@
       "address": "address",
       "deliveryStatus": "UnDelivered",
       "ordereddate": "Sun Aug 23 2020 00:32:23 GMT-0500 (Central Daylight Time)",
-      "id": 4
+      "id": 4,
+      "userid": 1
     },
     {
       "recipient_fname": "rfname5",
@@ -111,7 +157,8 @@
       "address": "address5",
       "deliveryStatus": "UnDelivered",
       "ordereddate": "2020/08/23",
-      "id": 5
+      "id": 5,
+      "userid": 1
     },
     {
       "recipient_fname": "rfnam7",
@@ -122,7 +169,20 @@
       "address": "addresssss",
       "deliveryStatus": "UnDelivered",
       "ordereddate": "2020/08/23",
-      "id": 6
+      "id": 6,
+      "userid": 1
+    },
+    {
+      "recipient_fname": "rfname",
+      "recipient_lname": "rlname",
+      "giftcardvalue": "5",
+      "percent": 0.25,
+      "mobilenumber": "96001255",
+      "address": "asdfsa",
+      "deliveryStatus": "UnDelivered",
+      "ordereddate": "2020/08/23",
+      "id": 7,
+      "userid": 1
     }
   ]
 }

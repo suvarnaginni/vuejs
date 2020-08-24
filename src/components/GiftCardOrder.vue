@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>{{ msg }}</h1>
+    <h3>{{ msg }}</h3>
      <div>
-         <span v-if="statusmessages.length" v-bind:class="[isSuccess? 'successmessage': 'errormessage']">
+         <span v-if="statusmessages.length>0" v-bind:class="[isSuccess? 'successmessage': 'errormessage']">
              <span v-for="(message, index) in statusmessages" v-bind:key="index">
                  {{message}}
              </span>
@@ -12,7 +12,7 @@
          <table>
             <tr>
                  <td>Date :</td>
-                 <td><input type="text" v-model.lazy="giftcard.ordereddate"></td>
+                 <td>{{ giftcard.ordereddate }}</td>
             </tr>
              <tr>
                  <td>Recipient First Name :</td>
@@ -24,19 +24,19 @@
             </tr>
             <tr>
                  <td>Gift Card Value :</td>
-                 <td><input type="text" v-model="giftcard.giftcardvalue" v-on:input="computeCommission" required></td>
+                 <td><input type="number" v-model="giftcard.giftcardvalue" v-on:input="computeCommission" required></td>
             </tr>
             <tr>
                  <td>Amount Payable (5% commission inclusive) :</td>
-                 <td><input type="text"  v-model.lazy="giftcard.percent" required></td>
+                 <td><input type="text"  v-model.lazy="giftcard.percent"></td>
             </tr>
             <tr>
                  <td>Recipient Mobile Number :</td>
-                 <td><input type="text"  v-model.lazy="giftcard.mobilenumber"  required></td>
+                 <td><input type="number" min="10"  v-model.lazy="giftcard.mobilenumber"  required></td>
             </tr>
             <tr>
                  <td>Address :</td>
-                 <td><input type="textarea"  v-model.lazy="giftcard.address"  required></td>
+                 <td><textarea  v-model.lazy="giftcard.address"  required> </textarea></td>
             </tr>
             <tr><td><button v-on:click.prevent="placeorder()">Place Order</button></td></tr>
          </table>
@@ -49,7 +49,7 @@ export default {
   name: 'GiftCardOrder',
   data: function(){
     return {
-      msg: 'Gift Card Order!!!!',
+      msg: 'Gift Card Order',
       giftcard: {
           "recipient_fname":"",
           "recipient_lname":"",
@@ -58,7 +58,8 @@ export default {
           "mobilenumber":"",
           "address":"",
           "deliveryStatus": "UnDelivered",
-          "ordereddate" : ""
+          "ordereddate" : "",
+          "userid": localStorage.UserId
       },
       statusmessages:[],
       isSuccess:true
@@ -90,6 +91,7 @@ export default {
            if(this.giftcard.recipient_fname.trim() =="" || this.giftcard.recipient_lname.trim() ==""|| this.giftcard.mobilenumber.trim() =="" || this.giftcard.address.trim() =="")
            {
             this.statusmessages.push("Please provide all mandatory fields.")
+            this.isSuccess=false
             return false;
            }
            return true;
@@ -106,3 +108,6 @@ export default {
   }
 }
 </script>
+<style scoped>
+
+</style>
